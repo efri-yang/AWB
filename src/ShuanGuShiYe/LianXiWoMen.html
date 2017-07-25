@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>联系川固</title>
+     <meta charset="utf-8">
+	<link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+    @@include("./views/_header.html")
+    @@include("./views/_nav.html")
+    <div class="sub-banner">
+        <div class="inner">
+          <p><img src="images/upload/sub_banner.jpg"></p>
+       </div>
+    </div>
+    <div class="h-tit-type-1">
+        <p><span class="en">Contact US</span></p>
+        <div class="chn">
+            <i class="icon-l"></i>
+            <i class="icon-r"></i>
+            <strong class="txt">联系川固</strong>
+        </div>
+    </div>
+
+    <div class="contact-us container clearfix">
+        <div class="contact-infor">
+            <p class="company">xxxxx有限股份公司</p>
+            <ul class="list">
+                <li>电话：400-000-0000</li>
+                <li>地址：北京xxxxx大厦</li>
+                <li>网址：www.XXXX.net</li>
+                <li>邮箱：****@xxxx.net</li>
+            </ul>
+            <div class="baidu-map"><img src="images/upload/baidu-map.jpg" /></div>
+        </div>
+        <div class="contact-form">
+        <form>
+            <div class="item">
+                <label>留言标题</label>
+                <p><input type="text" class="ipt-text" /></p>
+            </div>
+            <div class="item">
+                <label>留言内容</label>
+                <p><textarea  class="ipt-textarea"></textarea></p>
+            </div>
+            <div class="item">
+                <label>联系邮箱</label>
+                <p><input type="text"  class="ipt-text" /></p>
+            </div>
+            <div class="item">
+                <label>验证码</label>
+                <div class="yzm clearfix">
+                    <input type="text" class="ipt-text" />
+                    <div class="yzm-pic"><img src="images/upload/qrcode.jpg" /></div>
+                    <a href="javascript:void(0)" class="txt">看不清,换一张</a>
+                </div>
+            </div>
+            <div class="item btns">
+                <button type="submit" class="ipt-btn">提 交</button>
+                <button type="reset" class="ipt-btn">重 置</button>
+            </div>
+            </form>
+        </div>
+    </div>                             
+    
+
+		  @@include("./views/_footer.html")
+
+			
+  </body>
+</html>

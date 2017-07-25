@@ -1,0 +1,132 @@
+.detailpage-box{
+    .hd-bar{
+      border-bottom: 1px solid #cfcfcf;
+      padding-bottom: 10px;
+      position: relative;
+      h1{
+          font-size: 20px;
+          text-align: center;
+          margin-top: 50px;
+        }
+      .time{
+        margin-top: 10px;
+        text-align: center;
+      }
+      .back{
+          width: 167px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          background: #3277c6;
+          position: absolute;
+          left:0;
+          top:-8px;
+          font-size: 16px;
+          color: #fff;
+      }
+    }
+    .detail-con{
+      text-indent: 2em;
+      line-height: 27px;
+      padding: 30px 15px 50px;
+      border-bottom: 1px solid #d0d0d0;
+      font-size: 16px;
+      img{
+        max-width: 100%;
+      }
+    }
+    .news-dir{
+      padding: 20px 0;
+      margin-bottom: 50px;
+      font-size: 16px;
+       .prev{
+         float: left;
+         width: 45%;
+          @extend %text-overflow;
+       }
+       .next{
+         float: right;
+         width: 45%;
+         text-align: right;
+         @extend %text-overflow;
+       }
+    }
+}
+
+.detail-nav{
+  background: #70b3ff;
+  border-bottom: 1px solid #000000;
+  height: 70px;
+  overflow: hidden;
+
+  .white-bg{
+    position: absolute;
+    right: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+  }
+  .detail-nav-inner{
+    position: relative;
+    z-index: 10;
+     height: 100%;
+     color: #fff;
+
+      .tit{
+        font-size: 20px;
+        padding-top: 2px;
+
+      }
+      .con{
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        float: left;
+        width: 397px;
+         background:url("../images/detail_nav_inner.png") no-repeat left top;
+      }
+      .notice{
+        line-height: 70px;
+        height: 70px;
+        float: left;
+        width: 885px;
+        position: relative;
+        z-index: 10;
+        font-size: 18px;
+        color: #282828;
+        padding-left:95px;
+        overflow: hidden;
+         .scroll-wrap{
+           width: 100%;
+           overflow: hidden;
+           height: 70px;
+         }
+          .lab{
+            position: absolute;
+            left:0;
+            top:0;
+          }
+          .list{
+            position: relative;
+            width: 99999999px;
+            height: 100%;
+            ul{
+              position: absolute;
+              left:0;
+              top:0;
+              li{
+                float: left;
+                padding: 0 5px;
+              }
+            }
+          }
+      }
+      .num{
+        font-size: 24px;
+        letter-spacing: 5px;
+      }
+  }
+
+}

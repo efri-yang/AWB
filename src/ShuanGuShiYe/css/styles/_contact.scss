@@ -1,0 +1,88 @@
+.contact-infor{
+	float: left;
+	width:550px;
+	overflow: hidden;
+	.company{
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.list{
+		padding-top: 10px;
+		li{
+			line-height: 30px;
+			font-size: 16px;
+		}
+	}
+	.baidu-map{
+		width: 550px;
+		height: 270px;
+		overflow: hidden;
+		margin-top: 40px;
+	}
+}
+
+.contact-form{
+	float: right;
+	width: 600px;
+	.item{
+		margin-bottom: 12px;
+		label{
+			font-size: 16px;
+			margin-bottom: 5px;
+			display: block;
+		}
+		.ipt-text{
+			height: 23px;
+			padding: 9px 5px;
+			width:590px;
+			border:1px solid #eaeaea;
+			background: #fafafa;
+		}
+		.ipt-textarea{
+			height: 130px;
+			padding: 5px;
+			width:590px;
+			border:1px solid #eaeaea;
+		}
+		.yzm{
+			.ipt-text{
+				width: 120px;
+				padding: 9px 5px;
+				float: left;
+				margin-right: 10px;
+			}
+			.yzm-pic{
+				width: 120px;
+				height: 47px;
+				overflow: hidden;
+				float: left;
+				margin-right: 10px;
+			}
+			.txt{
+				line-height: 47px;
+				float: left;
+			}
+		}
+		.ipt-btn{
+			width: 120px;
+			height: 47px;
+			background: #e95a4c;
+			border:none;
+			cursor: pointer;
+			color: #fff;
+			font-size: 16px;
+			margin: 0 10px;
+			&:hover{
+				background: #d94b3d
+			}
+		}
+		&.btns{
+			text-align: right;
+			padding-top: 10px;
+		}
+	}
+}
+.contact-us{
+	padding-bottom: 100px;
+	margin-top: 40px;
+}

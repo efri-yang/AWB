@@ -1,0 +1,38 @@
+%text-overflow{
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+}
+.xhzy-box{
+	table{
+		width: 100%;
+		    border-left:1px solid #f8f8f8;
+			border-right:1px solid #f8f8f8;
+			border-bottom:1px solid #f8f8f8;
+			margin-bottom: 50px;
+			margin-top: 50px;
+			table-layout: fixed;
+		th{
+			background: #1667ba;
+			height: 45px;
+			color: #fff;
+			font-size: 16px;
+			font-weight: normal;
+			&.odd{
+				background: #014ca6;
+			}
+		}
+		td{
+			text-align: center;
+			font-size: 16px;
+			height: 48px;
+			@extend %text-overflow;
+
+		}
+		tbody{
+			td{
+				border-bottom: 1px solid #d5d5d5;
+			}
+		}
+	}
+}

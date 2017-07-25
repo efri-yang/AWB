@@ -1,0 +1,31 @@
+<div class="online-serve" id="J_online-serve">
+        <div class="side-l">
+            <span class="qq-icon"></span>
+            <span class="txt">在线客服</span>
+            <span class="arrow"></span>
+        </div>
+        <div class="slide-r">
+                <p class="tit">在线客服</p>
+                <div class="qq-t">在线咨询 <img src="../images/button_111.gif" /></div>
+                <div class="qq-qr">
+                    <p class="pic"><img src="images/kf_line.png"></p>
+                    <p class="txt">扫码加好友</p>
+                </div>
+                <p class="phone">电话：021-56692367</p>
+        </div>
+        <script type="text/javascript">
+            $(function(){
+                var $container=$("#J_online-serve");
+                var $slideL=$container.find('.side-l');
+                var $slideR=$container.find('.slide-r');
+                $slideL.on("click",function(){
+                    if($slideR.is(":visible")){
+                       
+                        $container.removeClass("open")
+                    }else{
+                         $container.addClass("open")
+                    }
+                })
+            })
+        </script>
+    </div>

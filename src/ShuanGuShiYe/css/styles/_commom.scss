@@ -1,0 +1,247 @@
+%text-overflow{
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+}
+.head-top{
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	color: #282828;
+	background: #e3e3e3;
+	.slogan{
+		float: left;
+
+	}
+	.handle{
+		float: right;
+		.one{
+			background: url("../images/head_line_vertical.jpg") no-repeat right center;
+			padding-right: 10px;
+			margin-right: 10px;
+		}
+	}
+}
+.head-logophone{
+	.logo{
+		float: left;
+		a{
+			height:80px;
+			display: block;
+			float: left;
+			width: 278px;
+			text-indent: -9999px;
+			background: url("../images/logo.png") no-repeat left center;
+		}
+	}
+	.phone{
+		float: right;
+		padding-left: 60px;
+		height: 80px;
+		line-height: 80px;
+		background: url("../images/icon_phone.jpg") no-repeat left center;
+		font-size: 20px;
+		color: #343432;
+	}
+}	
+
+.nav-box{
+	
+	background: url("../images/nav_bg.jpg")  repeat-x;
+	
+	
+	.list{
+		height: 58px;
+		overflow: hidden;
+		li{
+			float: left;
+			display: inline;
+			width: 117px;
+			border-left:1px solid #80abdb;
+			border-right:1px solid #80abdb;
+			margin: 0.5px;
+			&:first-child{
+				border-left: none;
+			}
+			&:last-child{
+				border-right: none;
+			}
+			a{
+				font-size: 18px;
+				color: #fff;
+				height: 58px;
+				line-height: 58px;
+				text-align: center;
+				display: block;
+				text-indent: center;
+				&:hover{
+					text-decoration: none;
+					background: url("../images/nav_bg_hover.jpg") no-repeat;
+				}
+			}
+			&.oncurr{
+				a{
+					background: url("../images/nav_bg_hover.jpg") no-repeat;
+				}
+			}
+		}
+	}
+}
+
+.footer{
+	background: #263765;
+	color: #fff;
+	padding: 20px 0 0;
+	.phone{
+		float:left;
+		background: url("../images/footer_phone.jpg") no-repeat left center;
+		height: 93px;
+		padding-left: 100px;
+		margin-right: 100px;
+		margin-top: 18px;
+		span{
+			margin-top: 15px;
+			display: block;
+		}
+		p{
+			font-size: 26px;
+			
+		}
+	}
+	.contact{
+		float: left;
+		line-height: 28px;
+		padding-top: 18px;
+	}
+	.qrcode{
+		float: right;
+		.tit{
+			width: 100px;
+			text-align: right;
+			float: left;
+			margin-right:18px;
+			padding-top: 30px;
+		}
+		.pic{
+			float: left;
+		}
+	}
+	.copyright{
+		margin-top: 18px;
+		padding: 15px 0;
+		text-align: center;
+		clear: both;
+		border-top:2px solid #3f578b;
+	}
+}
+.online-serve{
+	position: fixed;
+	right: 0;
+	top:200px;
+	
+	height: 275px;
+	padding: 10px 5px 10px 0;
+	z-index: 20;
+	background: #29a7e2;
+	border-radius: 5px 0 0 5px;
+	.side-l{
+		width: 45px;
+		text-align: center;
+		padding-top: 50px;
+		float: left;
+		cursor: pointer;
+		.qq-icon{
+			background: url("../images/qq1.png") no-repeat left center;
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+		}
+		.txt{
+			width: 20px;
+			color: #fff;
+			font-size: 16px;
+			display: inline-block;
+		}
+		.arrow{
+			width: 24px;
+			height: 24px;
+			background: url("../images/arrow_l.png") no-repeat;
+			display: inline-block;
+		}
+	}
+	.slide-r{
+		width: 175px;
+		float: left;
+		background: #f7f7f7;
+		border-radius: 5px;
+		display: none;
+		.tit{
+			font-size: 18px;
+			text-align: center;
+			padding: 15px 0 10px;
+		}
+		.qq-t{
+			text-align: center;
+			img{
+				vertical-align: middle;
+			}
+		}
+		.qq-qr{
+			margin-top:10px;
+			.pic{
+				text-align: center;
+			}
+			.txt{
+				text-align: center;
+			}
+		}
+		.phone{
+			border-top: 1px solid #ebe9e9;
+			margin-top: 10px;
+			text-align: center;
+			line-height: 35px;
+		}
+	}
+
+	&.open{
+		.side-l{
+			.arrow{
+				background: url("../images/arrow_r.png") no-repeat;
+			}
+		}
+		.slide-r{
+			display: block;
+		}
+	}
+	
+}
+.contactfix{
+	width: 220px;
+	position: fixed;
+	left:0;
+	top:250px;
+	z-index: 10;
+	padding-bottom: 5px;
+	border:1px solid #e8e8e8;
+	background: #fff;
+	.hd{
+		height: 40px;
+		line-height: 40px;
+		background:#004ba2;
+		text-align: center;
+		font-size: 18px;
+		color: #fff;
+	}
+	.bd{
+		.pic{
+			width: 210px;
+			height: 100px;
+			margin: 10px auto;
+			background: url("../images/contact_1.jpg") no-repeat;
+		}
+		.txt{
+			line-height: 25px;
+			padding: 0 5px;
+		}
+	}
+}

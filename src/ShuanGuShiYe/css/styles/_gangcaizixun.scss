@@ -1,0 +1,48 @@
+%text-overflow{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.gczx-list-box{
+	margin-top: 20px;
+	.list{
+		margin-bottom: 35px;
+		li{
+			padding: 20px 0;
+			border-bottom: 1px dashed #e5e5e5;
+			.pic{
+				width: 255px;
+				height: 140px;
+				overflow: hidden;
+				display: block;
+				float: left;
+				margin-right: 15px;
+			}
+			.tit{
+				@extend %text-overflow;
+				font-size: 16px;
+
+			}
+			.intro{
+				margin-top: 8px;
+				line-height: 25px;
+				max-height: 100px;
+				overflow: hidden;
+			}
+			.bar{
+				margin-top: 10px;
+				.time {
+						float: left;
+						color: #a99ea6;
+				}
+				.eye {
+						float: right;
+						background: url("../images/market_eye.jpg") no-repeat left center;
+						padding-left: 22px;
+						color: #a99ea6;
+				}
+			}
+
+		}
+	}
+}

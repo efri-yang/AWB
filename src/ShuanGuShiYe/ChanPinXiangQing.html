@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>联系川固</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery.jqzoom.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jqzoom-core.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    
+</head>
+
+<body>
+    @@include("./views/_header.html") @@include("./views/_nav.html")
+    <div class="container pro-detail">
+        <h1>T形刚</h1>
+        <div class="handle">
+            <span class="collect">收藏</span> | <span class="share">分享</span>
+        </div>
+        <!--  -->
+        <div class="staff-conBox clearfix">
+            <div class="staff-conBox-l" id="J_staff-conBox">
+                <div class="staff-bigWrap" id="J_staff-bigWrap">
+                    <div class="staff-bigPic clearfix"><a href="images/staff/zoom/pic1.jpg" class="jqzoom" rel='gal1'><img src="images/staff/big/pic1.jpg"  id="J_staff-bigPic" /></a></div>
+                </div>
+                <div class="staff-smallWrap clearfix" id="J_staff-smallWrap">
+                    <a href="#" class="staff-smallPrev staff-smallBtn" id="J_staff-smallPrev"></a>
+                    <a href="#" class="staff-smallNext staff-smallBtn" id="J_staff-smallNext"></a>
+                    <div class="staff-smallListWrap" id="J_staff-smallListWrap">
+                        <div class="staff-smallListInner" id="J_staff-smallListInner">
+                            <ul class="staff-smallList" id="thumblist">
+                                <li><a data-title="文本描述1"  rel="{gallery: 'gal1', smallimage: 'images/staff/big/pic1.jpg',largeimage:'images/staff/zoom/pic1.jpg'}"  class="staff-smallItem" /><img src="images/staff/small/pic01.jpg" /></a></li>
+
+                                <li><a data-title="文本描述1"  rel="{gallery: 'gal1', smallimage: 'images/staff/big/pic2.jpg',largeimage:'images/staff/zoom/pic2.jpg'}"  class="staff-smallItem" /><img src="images/staff/small/pic02.jpg" /></a></li>
+
+                                <li><a data-title="文本描述1"  rel="{gallery: 'gal1', smallimage: 'images/staff/big/pic3.jpg',largeimage:'images/staff/zoom/pic3.jpg'}"  class="staff-smallItem" /><img src="images/staff/small/pic03.jpg" /></a></li>
+
+                                <li><a data-title="文本描述1"  rel="{gallery: 'gal1', smallimage: 'images/staff/big/pic4.jpg',largeimage:'images/staff/zoom/pic4.jpg'}"  class="staff-smallItem" /><img src="images/staff/small/pic04.jpg" /></a></li>
+
+                                 <li><a data-title="文本描述1"  rel="{gallery: 'gal1', smallimage: 'images/staff/big/pic1.jpg',largeimage:'images/staff/zoom/pic1.jpg'}"  class="staff-smallItem" /><img src="images/staff/small/pic01.jpg" /></a></li>
+
+                                <li><a data-title="文本描述1"  rel="{gallery: 'gal1', smallimage: 'images/staff/big/pic2.jpg',largeimage:'images/staff/zoom/pic2.jpg'}"  class="staff-smallItem" /><img src="images/staff/small/pic02.jpg" /></a></li>
+
+                                <li><a data-title="文本描述1"  rel="{gallery:'gal1', smallimage: 'images/staff/big/pic3.jpg',largeimage: 'images/staff/zoom/pic3.jpg'}"  class="staff-smallItem" /><img src="images/staff/small/pic03.jpg" /></a></li>
+
+                                <li><a data-title="文本描述1"  rel="{gallery: 'gal1', smallimage: 'images/staff/big/pic4.jpg',largeimage: 'images/staff/zoom/pic4.jpg'}"  class="staff-smallItem" /><img src="images/staff/small/pic04.jpg" /></a></li>
+
+                            </ul>
+                        </div>
+                        <i class="staff-small-Arrow" id="J_staff-arrow"><b></b></i>
+                    </div>
+                </div>
+            </div>
+            <ul class="staff-conIntro">
+                <li><strong>材质：</strong>Q265,Q345</li>
+                <li><strong>规格：</strong>600*14</li>
+                <li><strong>价格(KG)：</strong><span class="money">￥3.10</span></li>
+                <li><strong>数量：</strong>一站式2吨</li>
+                <li><strong>厂地：</strong>本钢、日照等</li>
+                <li><strong>发布时间：</strong>2016-12-01</li>
+                <li><strong>仓库：</strong>某某某仓库中心</li>
+            </ul>
+        </div>
+        <!--  -->
+         <ul class="pro-dir">
+                <li><strong>上一个：</strong><a href="">内容内容内容内容</a></li>
+                <li><strong>下一个：</strong><a href="">内容内容内容内容</a></li>
+            </ul>
+    </div>
+    @@include("./views/_footer.html")
+    <script type="text/javascript">
+    $(function() {
+        $("#J_staff-bigPic").staffGallery({
+            fixLen: 5, //固定在第几张
+            isTitShow: false,
+            isBigBtnShow: false,
+            bigPicWrapW: 392, //大图的宽度
+            bigPicWrapH: 392, //大图高度  
+            viewLen:5, //滚动可见的长度
+            scroW:70, //li的宽度+边框+margin
+            dir: "left" //滚动方向向左                                  
+        });
+
+         $('.jqzoom').jqzoom({
+            zoomType: 'standard',
+            zoomWidth: 420,
+            //zoomWindow  default width
+            zoomHeight: 380,
+            //zoomWindow  default height
+            xOffset: 20,
+            //zoomWindow x offset, can be negative(more on the left) or positive(more on the right)
+            yOffset: 0,
+            lens:true,
+            
+            preloadImages: true,
+            alwaysOn:false,
+            title:false
+        })
+    })
+    </script>
+</body>
+
+</html>
