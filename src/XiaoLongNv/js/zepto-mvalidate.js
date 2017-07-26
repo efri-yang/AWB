@@ -121,7 +121,8 @@
         }
 
         //如果是data-conditional="name"函数验证,函数返回true或者是false
-        if(fieldConditional !="undefined" && status.pattern){
+        
+        if(fieldConditional !="undefined" && status.pattern && status.required){
             if($.isFunction(fieldConditional)){
                 status.conditional=!!fieldConditional.call($field, fieldValue,options);
             }else{

@@ -10,37 +10,122 @@
 </head>
 <body>
 	<div class="container">
+	   <form action="" method="post" id="J_form">
 		<div class="forms-avatar">
-				<div class="avatar"><img src="images/form_avatar_none.png"></div>
+				<div class="avatar">
+					<span class="pic"><img src="images/form_avatar_none.png" id="J_avatar-pic"></span>
+					<a href="javascript:;" class="file">上传头像
+						<input type="file" id="J_file">
+					</a>
+				</div>
 		</div>
 		<div class="pl30 pr30 forms-box">
 			<div class="item-para">
 				<label class="para-tit">真实姓名：</label>
-				<input type="text" class="ipt-text" />
+				<input type="text" class="ipt-text" data-required="true" data-descriptions="nickname" />
 			</div>
 			<div class="item-para">
 				<label class="para-tit">手机号码：</label>
-				<input type="text" class="ipt-text" />
+				<input type="text" class="ipt-text" data-pattern="^0?1[3|4|5|7|8][0-9]\d{8}$" data-required="true" data-descriptions="phone" />
 			</div>
 			<div class="item-para">
 				<label class="para-tit">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
-				<input type="text" class="ipt-text" />
+				<input type="text" class="ipt-text" data-required="true" data-descriptions="password" />
 			</div>
 			<div class="item-para">
 				<label class="para-tit">验&nbsp;&nbsp;证&nbsp;码：</label>
-				<input type="text" class="ipt-text" />
+				<input type="text" class="ipt-text" data-required="true" data-conditional="captcha" data-descriptions="yzcode"  />
 				<!-- 按钮通过添加 disabled-->
-				<button class="btn-getcode"  >获取验证码</button>
+				<button class="btn-getcode" type="button">获取验证码</button>
 			</div>
 			<div class="item-para">
 				<label class="para-tit">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label>
-				<input type="text" class="ipt-text" />
+				<input type="text" class="ipt-text" data-required="true" data-descriptions="username" />
 			</div>
 			<div class="item-para">
 				<input type="submit" value="" class="ipt-submit">
 			</div>
 		</div>
+		</form>
 	</div>
+ <script type="text/javascript" src="js/zepto-mvalidate.js"></script> 
+<script type="text/javascript">
+$(function(){
+	(function(){
+		var path,
+		clip = $("#J_avatar-pic"),
+		FileReader = window.FileReader;  
+		$("#J_file").on("change",function(){
+			if (FileReader) {//chrome浏览器处理  
+                var reader = new FileReader(),  
+                    file = this.files[0];  
+                reader.onload = function(e) {  
+                    clip.attr("src", e.target.result);//这里是把图片转成64位数据存入<img>中的src里  
+                };  
+                reader.readAsDataURL(file);  
+                
+            }  
+            else {
+                path = $(this).val();  
+                if (/"\w\W"/.test(path)) {  
+                    path = path.slice(1,-1);  
+                }  
+                clip.attr("src",path);  
+            }  
+		})
+	})();
+
+	$("#J_form").mvalidate({
+	             type: 1,
+	             onKeyup: true,
+	             sendForm: false,
+	             firstInvalidFocus: false,
+	             descriptions: {
+	                nickname: {
+	                     required: '请输入真实姓名！'
+	                 },
+	                 phone: {
+	                     required: '请输入手机号码',
+	                     pattern: '您输入的手机号码格式不正确'
+	                 },
+	                 password: {
+	                     required: '请输入密码'
+	                 },
+	                 yzcode: {
+	                     required: '请输入验证码'
+	                 },
+	                 getaddress:{
+	                 	 username: '请输入昵称',
+	                 }
+	             },
+	             conditional:{
+	             	captcha:function(val){
+	             		alert("在这里验证验证码，通过返回true 或者是false来判断是否通过")
+	                    if(!val && !val.length) return false;
+	                    var flag
+	                    $.ajax({
+	                        url:"php/captchaAjax1.php",
+	                        type:"post",
+	                        async:false,
+	                        data:{captchaCode:val},
+	                        success:function(data){
+	                            flag=(data==0) ? false : true;
+	                            
+	                        }
+	                    });
+	                    return flag;
+               		}
+	             }
+	         });
+
+
+})
+</script>
+
+
+
+
+
 
 </body>
 </html>
