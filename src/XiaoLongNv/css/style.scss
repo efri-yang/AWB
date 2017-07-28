@@ -43,6 +43,10 @@
     padding-right: px2rem(30px);
 }
 
+.pbfooter {
+    padding-bottom: px2rem(110px);
+}
+
 /**
  * 表单验证样式
  */
@@ -468,6 +472,7 @@ body {
 }
 
 .home-zphb{
+    margin-top:px2rem(30px);
     .caption{
         width:550px;
         height:px2rem(102px);
@@ -479,11 +484,42 @@ body {
 }
 .h-zphb-list{
     position:relative;
+    height:px2rem(515px);
+    margin-top:px2rem(-18px);
     li{
         position: absolute;
         top: 0;
+        height:px2rem(515px);
+        .pic{
+                position: absolute;
+                left: 50%;
+                top: 0;
+                -webkit-transform: translate(-50%,0);
+                -ms-transform: translate(-50%,0);
+                -moz-transform: translate(-50%,0);
+                z-index:1 ;
+        }
+        .txt{
+            height:px2rem(43px);
+            width:px2rem(190px);
+            line-height:px2rem(43px);
+            color:#fff;
+            overflow:hidden;
+            background:url("../images/zphb_list_bg.png") no-repeat top center;
+            background-size:100% 100%;
+            position: absolute;
+            left: 50%;
+            bottom:0;
+            -webkit-transform: translate(-50%,0);
+            -ms-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            z-index:1 ;
+            @include font-dpr(12px);
+            @extend %text-overflow;
+        }
         &.item-1{
             left:50%;
+            width:px2rem(338px);
             margin-left:px2rem(-338px/2);
             .pic{
                 width:px2rem(338px);
@@ -504,208 +540,118 @@ body {
                     }
                 }
             }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.home-phzb {
-    background: url("../images/phzb_bg.png") no-repeat top center;
-    background-size: 100% 100%;
-    height: px2rem(370px);
-    padding-top: px2rem(44px);
-    position: relative;
-    margin-top: px2rem(-190px);
-    .caption {
-        width: px2rem(292px);
-        height: px2rem(105px);
-        position: absolute;
-        left: 50%;
-        -webkit-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0%);
-        -moz-transform: translate(-50%, 0%);
-        transform: translate(-50%, 0%);
-        top: px2rem(-30px);
-        background: url("../images/phzb_icon.png") no-repeat top center;
-        background-size: 100% 100%;
-    }
-    .list {
-        position: relative;
-        li {
-            position: absolute;
-
-            top: 0;
-            .txt {
-                text-align: center;
-                @include font-dpr(12px);
-                color: #26252b;
-                font-weight: bold;
-                @extend %text-overflow;
-            }
-            .pic {
-                b {
-                    border-radius: 50%;
-                    overflow: hidden;
-                    display: block;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
-            &.item-1 {
-
-                left: 50%;
-                width: px2rem(213px);
-                margin-left: px2rem(-213px/2);
-                .pic {
-                    width: px2rem(213px);
-                    height: px2rem(232px);
-                    padding: px2rem(70px) px2rem(49px);
-                    background: url("../images/rank1_1_icon.png") no-repeat top center;
-                    background-size: 100% 100%;
-                    b {
-
-                        width: px2rem(115px);
-                        height: px2rem(115px);
-                    }
-                }
-            }
-            &.item-2 {
-                left: px2rem(40px);
-                width: px2rem(200px);
-
-                .pic {
-                    width: px2rem(148px);
-                    height: px2rem(207px);
-                    margin: 0 auto;
-                    padding: px2rem(88px) px2rem(33px) 0;
-                    background: url("../images/rank1_2_icon.png") no-repeat top center;
-                    background-size: 100% 100%;
-                    b {
-
-                        width: px2rem(84px);
-                        height: px2rem(84px);
-                    }
-                }
-            }
-            &.item-3 {
+            .stick{
+                width:px2rem(148px);
+                height:px2rem(208px);
+                overflow:hidden;
+                background:url("../images/zphb_rank_bb_1.png") no-repeat top center;
+                background-size:100% 100%;
                 position: absolute;
-                right: px2rem(40px);
-                width: px2rem(200px);
-                .pic {
-                    width: px2rem(151px);
-                    height: px2rem(207px);
-                    margin: 0 auto;
-                    padding: px2rem(89px) px2rem(34px) 0;
-                    background: url("../images/rank1_3_icon.png") no-repeat top center;
-                    background-size: 100% 100%;
-                    b {
+                left: 50%;
+                top:px2rem(270px);
+                -webkit-transform: translate(-50%,0);
+                -ms-transform: translate(-50%,0);
+                -moz-transform: translate(-50%,0);
+                z-index: 2;
+            }
+        }
 
-                        width: px2rem(84px);
-                        height: px2rem(84px);
+        &.item-2{
+            left:px2rem(30px);
+            z-index:1 ;
+            width:px2rem(152px);
+            .pic{
+                width:px2rem(152px);
+                height:px2rem(151px);
+                overflow:hidden;
+                padding:px2rem(17px) px2rem(17px) 0;
+                background:url("../images/zphb_rank_2.png") no-repeat top center;
+                background-size:100% 100%;
+                top:px2rem(98px);
+                b{
+                    width:px2rem(118px);
+                    height:px2rem(118px);
+                    overflow:hidden;
+                    display:block;
+                    border-radius:100%;
+                    img{
+                        width:100%;
+                        height:100%;
                     }
                 }
             }
+            .stick{
+                width:px2rem(149px);
+                height:px2rem(255px);
+                overflow:hidden;
+                background:url("../images/zphb_rank_bb_22.png") no-repeat top center;
+                background-size:100% 100%;
+                position: absolute;
+                left: 50%;
+                top:px2rem(220px);
+                -webkit-transform: translate(-50%,0);
+                -ms-transform: translate(-50%,0);
+                -moz-transform: translate(-50%,0);
+                z-index: 2;
+            }
         }
-    }
-}
 
-.h-rank-list {
-    position: relative;
-    margin: 0 px2rem(40px);
-    height: px2rem(240px);
-    margin-top: px2rem(20px);
-    li {
-        position: absolute;
-        top: 0;
-        width: px2rem(174px);
-        .txt {
-            text-align: center;
-            @include font-dpr(12px);
-            color: #26252b;
-            font-weight: bold;
-            @extend %text-overflow;
-            background: url("../images/rank2_txtbg_icon.png") no-repeat center center;
-            height: px2rem(57px);
-            line-height: px2rem(57px);
-            background-size: auto 100%;
-        }
-        .pic {
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: 100% 100%;
-            width: px2rem(174px);
-            height: px2rem(174px);
-            padding-top: px2rem(30px);
-            overflow: hidden;
-            b {
-                border-radius: 50%;
-                overflow: hidden;
-                width: px2rem(115px);
-                height: px2rem(115px);
-                display: block;
-                margin: 0 auto;
-                img {
-                    width: 100%;
-                    height: 100%;
+        &.item-3{
+            right:px2rem(30px);
+            z-index:1 ;
+            width:px2rem(152px);
+            .pic{
+                width:px2rem(152px);
+                height:px2rem(151px);
+                overflow:hidden;
+                padding:px2rem(17px) px2rem(17px) 0;
+                background:url("../images/zphb_rank_3.png") no-repeat top center;
+                background-size:100% 100%;
+                top:px2rem(98px);
+                b{
+                    width:px2rem(118px);
+                    height:px2rem(118px);
+                    overflow:hidden;
+                    display:block;
+                    border-radius:100%;
+                    img{
+                        width:100%;
+                        height:100%;
+                    }
                 }
             }
-        }
-        &.item-1 {
-            left: 50%;
-
-            margin-left: px2rem(-174px/2);
-            .pic {
-                background-image: url("../images/rank2_1_icon.png");
-            }
-        }
-        &.item-2 {
-            left: 0;
-
-            .pic {
-                background-image: url("../images/rank2_2_icon.png");
-            }
-        }
-        &.item-3 {
-            right: 0;
-
-            .pic {
-                background-image: url("../images/rank2_3_icon.png");
+            .stick{
+                width:px2rem(149px);
+                height:px2rem(255px);
+                overflow:hidden;
+                background:url("../images/zphb_rank_bb_22.png") no-repeat top center;
+                background-size:100% 100%;
+                position: absolute;
+                left: 50%;
+                top:px2rem(220px);
+                -webkit-transform: translate(-50%,0);
+                -ms-transform: translate(-50%,0);
+                -moz-transform: translate(-50%,0);
+                z-index: 2;
             }
         }
     }
 }
 
-.h-tit-type1 {
-    height: 69px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    &.tit-monthrank {
-        margin-top: px2rem(30px);
-        background-image: url("../images/h_yphb_caption.png");
-    }
-    &.tit-dayrank {
-        margin-top: px2rem(100px);
-        background-image: url("../images/h_rpab_caption.png");
-    }
-}
+
+
+
+
+
+
+
+
+
 
 .h-footer {
     display: flex;
     margin-top: px2rem(40px);
-    padding: 0 px2rem(15px);
+    padding: 0 px2rem(15px) px2rem(30px);
     li {
         flex: 1;
         padding: 0 px2rem(15px);
@@ -716,13 +662,13 @@ body {
         }
         &.item-1 {
             a {
-                background: url("../images/btn_wytp.png") no-repeat top center;
+                background: url("../images/btn_zjtp.png") no-repeat top center;
                 background-size: auto 100%;
             }
         }
         &.item-2 {
             a {
-                background: url("../images/btn_zhuce.png") no-repeat top center;
+                background: url("../images/btn_zchy.png") no-repeat top center;
                 background-size: auto 100%;
             }
         }
@@ -736,19 +682,12 @@ body {
  * 
  */
 
-.rule-body {
-    .container-out-bg {
-        height: 100%;
-    }
-    .container-inner-bg {
-        height: 100%;
-    }
-}
 
 .rules-box {
-    padding-top: px2rem(110px);
+    padding-top: px2rem(105px);
     position: relative;
-    margin-top: px2rem(-230px);
+    padding-bottom:px2rem(30px);
+    margin-top:px2rem(-10px);
     .caption {
         width: px2rem(292px);
         height: px2rem(105px);
@@ -761,6 +700,7 @@ body {
         -ms-transform: translate(-50%, 0%);
         -moz-transform: translate(-50%, 0%);
         transform: translate(-50%, 0%);
+        background-size:100% 100%;
     }
     .iscroll-wrap {
         position: relative;
@@ -803,7 +743,7 @@ body {
         background: url("../images/rules_bg.png") no-repeat top center;
         background-size: 100% 100%;
         .detail {
-            padding: px2rem(30px);
+            padding:px2rem(15px) px2rem(30px);
             .tit {
                 color: #9b2b32;
                 @include font-dpr(18px);
@@ -830,17 +770,193 @@ body {
     left: 0;
     width: 100%;
     bottom: 0;
-    height: px2rem(100px);
-    line-height: px2rem(100px);
-    background: #e4d592;
-    box-shadow: 0 0 15px 0 #666;
+    height: px2rem(98px);
+    line-height: px2rem(98px);
+    background: #7d0b0b;
+    box-shadow: 0 0 15px 0 #6e6c6c;
     li {
         flex: 1;
         a {
             display: block;
             text-align: center;
             @include font-dpr(16px);
-            color: #ef626f;
+            color: #fff;
+            i{
+                overflow:hidden;
+                 display:inline-block;
+                 vertical-align:middle;
+                 background-position:top center;
+                 background-repeat:no-repeat;
+                 background-size:100% 100%;
+                 margin-right:px2rem(10px);
+            }
+        }
+        &.active,&:active{
+            background-color:darken(#7d0b0b,8%)
+        }
+        &.item-1{
+            a{
+                i{
+                    width:px2rem(31px);
+                    height:px2rem(28px);
+                    margin-top:px2rem(-3px);
+                    background-image:url("../images/ft_home_icon.png");
+
+                }
+            }
+        }
+        &.item-2{
+            a{
+                i{
+                    width:px2rem(23px);
+                    height:px2rem(30px);
+                    margin-top:px2rem(-3px);
+                    background-image:url("../images/ft_wd_icon.png");
+
+                }
+            }
+        }
+        &.item-3{
+            a{
+                i{
+                    width:px2rem(30px);
+                    height:px2rem(30px);
+                    margin-top:px2rem(-3px);
+                    background-image:url("../images/ft_serch_icon.png");
+
+                }
+            }
+        }
+    }
+}
+
+/**
+ * 列表
+ */
+.pro-tab-hd{
+    background:url("../images/pro_list_tab_hd.png") no-repeat top center;
+    background-size:100% 100%;
+    height:px2rem(68px);
+    display:flex;
+    padding:px2rem(8px) px2rem(15px);
+    margin-top:px2rem(20px);
+
+    li{
+        flex:1;
+        a{
+            display:block;
+            background-size:100% 100%;
+            background-repeat:no-repeat;
+            background-position:top center;
+            height:px2rem(52px);
+        }
+        &.active{
+            &.item-1{
+                a{
+                    
+                    background-image:url("../images/pro_list_tab_zjf_hover.png");
+                }
+            }
+            &.item-2{
+                a{
+                    height:52px;
+                    background-image:url("../images/pro_list_tab_rjf_hover.png");
+                }
+            }
+        }
+        &.item-1{
+            a{
+                
+                background-image:url("../images/pro_list_tab_zjf.png");
+            }
+        }
+        &.item-2{
+            a{
+                height:52px;
+                background-image:url("../images/pro_list_tab_rjf.png");
+            }
+        }
+    }
+}
+
+.pro-list{
+    li{
+        width: px2rem(330px);
+        height:px2rem(446px);
+        overflow:hidden;
+        background:url("../images/pro_li_bg.png") no-repeat top center;
+        background-size:100% 100%;
+        position:relative;
+        float:left;
+        margin-top:px2rem(27px);
+        &:nth-child(2n){
+            margin-left:px2rem(27px);
+        }
+        .pic{
+            width:px2rem(220px);
+            height:px2rem(220px);
+            margin:px2rem(56px) auto 0;
+            background: #000;
+            position: relative;
+            overflow:hidden;
+            img{
+                width:100%;
+                height:100%;
+            }
+            &:before {
+                content: "";
+                width:px2rem(150px);
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-bottom:px2rem(35px) solid transparent;
+                border-left:px2rem(35px) solid #fff;
+                border-right:px2rem(35px) solid #fff;
+            }
+            &:after {
+                content: "";
+                width:px2rem(150px);
+                height: 0;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-top:px2rem(35px) solid transparent;
+                border-left:px2rem(35px) solid #fff;
+                border-right:px2rem(35px) solid #fff;
+            }           
+        }
+        .para-val{
+            padding:0 px2rem(105px) 0 px2rem(13px);
+            margin-top:px2rem(52px);
+
+            .name{
+                color:#26252b;
+                font-size:px2rem(24px);
+                margin-bottom:px2rem(3px);
+                @extend %text-overflow;
+            }
+            .score{
+                color:#992a31;
+                font-size:px2rem(26px);
+                margin-bottom:px2rem(3px);
+                 @extend %text-overflow;
+            }
+            .rank{
+                color:#5f5d5b;
+                font-size:px2rem(24px);
+                 @extend %text-overflow;
+            }
+        }
+        .btn-buy{
+            position:absolute;
+            right:px2rem(12px);
+            bottom:px2rem(30px);
+            width:px2rem(100px);
+            height:px2rem(88px);
+            overflow:hidden;
+            background:url("../images/pro_buy_bg.png") no-repeat top center;
+            background-size:100% 100%;
         }
     }
 }
