@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="header-list">
+            <li class="header-phone"><a href="tel:18559160494"></a></li>
+            <li class="header-gz"><a href="#"></a></li>
+        </ul>
+        <div class="mine-caption">1245号 文若菲</div>
+        <div class="pl30 pr30 pbfooter">
+            <ul class="mine-para-list">
+                <li>
+                    <p class="tit">编号</p>
+                    <p class="val">MB004MB004MB004MB004</p>
+                </li>
+                <li>
+                    <p class="tit">总排名</p>
+                    <p class="val">1</p>
+                </li>
+                <li>
+                    <p class="tit">总积分</p>
+                    <p class="val">105781</p>
+                </li>
+                <li>
+                    <p class="tit">日排行</p>
+                    <p class="val">45</p>
+                </li>
+                <li>
+                    <p class="tit">日积分</p>
+                    <p class="val">2604</p>
+                </li>
+            </ul>
+            <div class="mine-avatar"><img src="upload/3.jpg"></div>
+            
+                <div class="pro-scroll-box">
+                    <ul class="mine-buy-list">
+                        <li>
+                            <div class="pic"><img src="upload/1.jpg"></div>
+                            <p class="tit">LANGELIUYUAN阿斯顿发生地方斯顿发生地方斯顿发生地方斯顿发生地方</p>
+                            <div class="bar">
+                                <span class="num">购买他/她 10 次</span>
+                                <span class="time">2017/07/13 20:45</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="upload/1.jpg"></div>
+                            <p class="tit">顿发生地方斯顿发生地方方</p>
+                            <div class="bar">
+                                <span class="num">购买他/她 10 次</span>
+                                <span class="time">2017/07/13 20:45</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="upload/1.jpg"></div>
+                            <p class="tit">LANGELIUYUAN阿斯顿发生地方斯顿发生地方斯顿发生地方斯顿发生地方</p>
+                            <div class="bar">
+                                <span class="num">购买他/她 10 次</span>
+                                <span class="time">2017/07/13 20:45</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="upload/1.jpg"></div>
+                            <p class="tit">顿发生地方斯顿发生地方方</p>
+                            <div class="bar">
+                                <span class="num">购买他/她 10 次</span>
+                                <span class="time">2017/07/13 20:45</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="upload/1.jpg"></div>
+                            <p class="tit">LANGELIUYUAN阿斯顿发生地方斯顿发生地方斯顿发生地方斯顿发生地方</p>
+                            <div class="bar">
+                                <span class="num">购买他/她 10 次</span>
+                                <span class="time">2017/07/13 20:45</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="upload/1.jpg"></div>
+                            <p class="tit">顿发生地方斯顿发生地方方</p>
+                            <div class="bar">
+                                <span class="num">购买他/她 10 次</span>
+                                <span class="time">2017/07/13 20:45</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="upload/1.jpg"></div>
+                            <p class="tit">LANGELIUYUAN阿斯顿发生地方斯顿发生地方斯顿发生地方斯顿发生地方</p>
+                            <div class="bar">
+                                <span class="num">购买他/她 10 次</span>
+                                <span class="time">2017/07/13 20:45</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="upload/1.jpg"></div>
+                            <p class="tit">顿发生地方斯顿发生地方方</p>
+                            <div class="bar">
+                                <span class="num">购买他/她 10 次</span>
+                                <span class="time">2017/07/13 20:45</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+       
+        </div>
+    </div>
+    @@include("./views/_footer.html")
+    <script type="text/javascript" src="js/dropload/dropload.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/dropload/dropload.css" />
+    <script type="text/javascript">
+    $(function() {
+        (function() {
+            var itemIndex = 0;
+
+            var itemLoadEnd = false;
+            var itemCurrPage = 0;
+            var itemPageNum = 8;
+
+            
+
+            var dropload = $('.pro-scroll-box').dropload({
+                scrollArea: window,
+                loadDownFn: function(me) {
+                    // 加载菜单一的数据                    
+                        $.ajax({
+                            type: 'GET',
+                            // data:{page:item1CurrPage,num:item1PageNum},
+                            url: 'http://wnworld.com/conn/bbgj.php',
+                            dataType: 'json',
+                            success: function(data) {
+                                var data = {
+                                "lists": [{
+                                        "name": "BM001号-林霖琳琳琳",
+                                        "pic": "upload/2.jpg",                                      
+                                        "count": "10",
+                                        "time": "2017/07/13 20:45"
+                                    },
+                                   {
+                                        "name": "BM001号-林霖琳琳琳",
+                                        "pic": "upload/2.jpg",                                      
+                                        "count": "10",
+                                        "time": "2017/07/13 20:45"
+                                    },
+                                    {
+                                        "name": "BM001号-林霖琳琳琳",
+                                        "pic": "upload/2.jpg",                                      
+                                        "count": "10",
+                                        "time": "2017/07/13 20:45"
+                                    },
+                                    {
+                                        "name": "BM001号-林霖琳琳琳",
+                                        "pic": "upload/2.jpg",                                      
+                                        "count": "10",
+                                        "time": "2017/07/13 20:45"
+                                    },
+                                    {
+                                        "name": "BM001号-林霖琳琳琳",
+                                        "pic": "upload/2.jpg",                                      
+                                        "count": "10",
+                                        "time": "2017/07/13 20:45"
+                                    },
+                                    {
+                                        "name": "BM001号-林霖琳琳琳",
+                                        "pic": "upload/2.jpg",                                      
+                                        "count": "10",
+                                        "time": "2017/07/13 20:45"
+                                    },
+                                    {
+                                        "name": "BM001号-林霖琳琳琳",
+                                        "pic": "upload/2.jpg",                                      
+                                        "count": "10",
+                                        "time": "2017/07/13 20:45"
+                                    },
+                                    {
+                                        "name": "BM001号-林霖琳琳琳",
+                                        "pic": "upload/2.jpg",                                      
+                                        "count": "10",
+                                        "time": "2017/07/13 20:45"
+                                    }
+                                ]
+                            }
+                                itemCurrPage++;
+                                var result = "";
+                                for (var i = 0; i < data.lists.length; i++) {
+                                    result += '<li><div class="pic"><img src="' + data.lists[i].pic + '"></div><p class="tit">' + data.lists[i].name + '</p><div class="bar"><span class="num">购买他/她 ' + data.lists[i].count + ' 次</span><span class="time">' + data.lists[i].time + '</span></div></li>'
+                                }
+
+
+                                setTimeout(function() { //开发记得删除setTimeout函数
+                                    $(".mine-buy-list").append(result);
+
+                                    me.resetload();
+                                    if (!data.lists.length || data.lists.length < itemPageNum) {
+                                        itemLoadEnd = true;
+                                        // 锁定
+                                        me.lock();
+                                        // 无数据
+                                        me.noData();
+                                    }
+                                }, 2000)
+
+
+
+                            },
+                            error: function(xhr, type) {
+                                console.dir('Ajax error!');
+                                // 即使加载出错，也得重置
+                                me.resetload();
+                            }
+                        });
+                        // 加载菜单二的数据
+                }
+            });
+        })();
+    })
+    </script>
+</body>
+
+</html>

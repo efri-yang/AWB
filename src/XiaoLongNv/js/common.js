@@ -139,17 +139,17 @@
             test: 100,
             _init: function() {
                var _this=this;
-               this.$element.on("touchmove", function(event) {
-                    event.stopPropagation();
-                    return false;
-                });
+               // this.$element.on("touchmove", function(event) {
+               //      event.stopPropagation();
+               //      return false;
+               //  });
                this.$element.find("[data-roler='close']").on("click",function(e){
                     e.preventDefault();
                     _this.hide();
                })
             },
             _shadeShow: function() {
-                this.$shadow = $('<div class="designer-dialog-shadow in"></div>');
+                this.$shadow = $('<div class="pro-buy-shadow in"></div>');
                 this.$shadow.appendTo($("body"));
                 this._shadeEvent();
             },
@@ -166,7 +166,8 @@
                 if(!!this.opts.shadeClose){
                     this.$shadow.on("click",function(){
                        _this._shadeHide();
-                    }).on("touchstart touchmove", function(event) {
+                    })
+                    .on("touchstart touchmove", function(event) {
                         _this._shadeHide();
                         event.stopPropagation();
                         return false;
@@ -182,7 +183,9 @@
                 var _this=this;
                 !!this.opts.beforeShow && this.opts.beforeShow.call(this);
                 this.$element.addClass('dia-in').transitionEnd(function(){
-                    _this.opts.afterShow && _this.opts.afterShow.call(this);
+                    setTimeout(function(){
+                      _this.opts.afterShow && _this.opts.afterShow.call(this);
+                    },0)
                     !!fn && setTimeout(fn, 0);
                 });
             },

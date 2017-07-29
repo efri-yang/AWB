@@ -1,5 +1,35 @@
 <ul class="footer">
-    <li class="item-1 active"><a href="#"><i></i>首页</a></li>
-    <li class="item-2"><a href="#"><i></i>我的</a></li>
-    <li class="item-3"><a href="#"><i></i>搜索</a></li>
+    <li class="item-1 active"><a href="index.html"><i></i>首页</a></li>
+    <li class="item-2"><a href="mine.html"><i></i>我的</a></li>
+    <li class="item-3"><a href="#"  id="J_btn-ft-seach"><i></i>搜索</a></li>
 </ul>
+
+
+<div class="search-dialog-box" id="J_search-dialog-box">
+    <div class="search-dia-main">
+		<div class="form-box">
+			<div class="item">
+				<input type="text" class="ipt-text" placeholder="请输入选手的编号或昵称">
+			</div>
+			<div class="item">
+				<input type="submit" value="" class="ipt-submit">
+			</div>
+		</div>
+    </div> 
+	<span class="close" data-roler="close"><b></b></span>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$searchDia=$("#J_search-dialog-box").dialogs({
+	        afterShow:function(){
+	            myScroll = new IScroll('#wrapper',{
+	                scrollbars: true
+	            });
+	        }
+	    });
+		$("#J_btn-ft-seach").on("click",function(event){
+				event.preventDefault();
+				$searchDia.show();
+		})
+	})
+</script>
