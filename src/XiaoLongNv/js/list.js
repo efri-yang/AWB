@@ -247,7 +247,8 @@ $(function() {
     $proDia=$("#J_pro-dia-box").dialogs({
         afterShow:function(){
             myScroll = new IScroll('#wrapper',{
-                scrollbars: true
+                scrollbars: true,
+                click:true
             });
         }
     });
@@ -256,6 +257,17 @@ $(function() {
                  //alert("xx")
         });
     });
+
+
+    //
+    $(document).on("click",".reduce",function(){
+        alert("reduce")
+    });
+
+    $(document).on("click",".plus",function(){
+        alert("plus")
+    })
+
 
 
 

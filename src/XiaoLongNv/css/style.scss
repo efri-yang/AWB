@@ -220,8 +220,15 @@ body {
         text-decoration: none;
     }
 }
-
+.register-body{
+    .container{
+        background:none;
+        padding-top:0;
+        background:#fff;
+    }
+}
 .forms-box {
+    background:#fff;
     .item-para {
         position: relative;
         .para-tit {
