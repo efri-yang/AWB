@@ -184,6 +184,8 @@ $(function() {
                                     me.lock();
                                     // 无数据
                                     me.noData();
+
+                                    //没有数据可以 me.$domDown
                                 }
                             }, 2000)
 
@@ -246,10 +248,12 @@ $(function() {
 
     $proDia=$("#J_pro-dia-box").dialogs({
         afterShow:function(){
-            myScroll = new IScroll('#wrapper',{
-                scrollbars: true,
-                click:true
-            });
+           $(window).on("load",function(){
+                 var myScroll = new IScroll('#wrapper',{
+                    scrollbars: true,
+                    click:true
+                });
+           })
         }
     });
     $(document).on("click","span.btn-buy",function(){
@@ -260,13 +264,15 @@ $(function() {
 
 
     //
-    $(document).on("click",".reduce",function(){
-        alert("reduce")
+    $(".reduce").on("click",function(){
+        alert("reduce");
     });
-
-    $(document).on("click",".plus",function(){
+    $(".plus").on("click",function(){
         alert("plus")
-    })
+    });
+    
+
+    
 
 
 

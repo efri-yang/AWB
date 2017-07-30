@@ -156,6 +156,7 @@ body {
     background:url("../images/header_body_bg.jpg") no-repeat top center;
     background-size:100% auto;
     padding-top:px2rem(473px);
+   
 }
 
 
@@ -358,8 +359,15 @@ body {
             }
         }
         &.header-gz{
+            margin-bottom: px2rem(30px);
             a{
                 background-image:url("../images/guize_icon_1.png");
+            }
+        }
+        &.header-tg{
+
+             a{
+                background-image:url("../images/tuiguang_icon_1.png");
             }
         }
     }   
@@ -374,10 +382,10 @@ body {
     position:relative;
     margin-top:px2rem(80px);
     .caption{
-        width:292px;
+        width:px2rem(292px);
         height:px2rem(101px);
         background:url("../images/mrzx_caption.png") no-repeat top center;
-        background-size:100% 100%;
+        background-size:auto 100%;
         position: absolute;
          left: 50%;
         -webkit-transform: translate(-50%, 0);
@@ -481,7 +489,7 @@ body {
 .home-zphb{
     margin-top:px2rem(30px);
     .caption{
-        width:550px;
+        width:px2rem(550px);
         height:px2rem(102px);
         background:url("../images/zphb_caption.png") no-repeat top center;
         background-size:auto 100%;
@@ -1111,14 +1119,14 @@ body {
                             width:px2rem(50px);
                             height:px2rem(50px);
                             text-align:center;
-                            line-height:px2rem(35px);
+                            line-height:0.7;
                             border-radius:100%;
                             background:#e9c969;
                             position:absolute;
                             left:0;
                             top:0;
                             color:#fff;
-                            @include font-dpr(30px);
+                            font-size:px2rem(60px);
                         }
                         .ipt-num{
                             
@@ -1133,18 +1141,17 @@ body {
                             font-size:px2rem(32px);
                         }
                         .plus{
-                             position:absolute;
+                            position:absolute;
                             right:0;
                             top:0;
                             width:px2rem(50px);
                             height:px2rem(50px);
                             text-align:center;
-                            line-height:px2rem(35px);
+                            line-height:0.7;
                             border-radius:100%;
                             background:#e9c969;
-                           
                             color:#fff;
-                            @include font-dpr(28px);
+                           font-size:px2rem(60px);
                         }
 
                 }
@@ -1187,10 +1194,21 @@ body {
         color:#333333;
         border:2px solid #5f5d5b;
         border-radius:px2rem(10px);
-        padding:px2rem(10px) px2rem(15px);
+        padding:px2rem(10px) px2rem(15px) px2rem(10px) px2rem(160px);
         margin-top:px2rem(25px);
         font-size:px2rem(32px);
         line-height:1.3;
+        .lab{
+            top:px2rem(7px);
+            left:px2rem(15px);
+            position:absolute;
+            
+        }
+        .ipt-address{
+            width:100%;
+            border:none;
+            color: #333333;
+        }
     }
     .money{
         font-size:px2rem(36px);
@@ -1398,4 +1416,67 @@ body {
             }
         }
     }
+}
+
+
+.qrcode-dialog-box{
+    position:fixed;
+    visibility:hidden;
+    opacity:0;
+
+   
+    top:25%;
+    left:50%;
+    margin-left:px2rem(-450px/2);
+    z-index: 9999;
+    width:px2rem(450px);
+    padding-top:px2rem(101px);
+    transition:all 0.20s ease-out;
+    transform: scale3d(.3, .3, .3);
+    &.dia-in{
+        visibility:visible;
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+    .qrcode-dia-main{
+        overflow:hidden;
+        background:#fff;
+        border-radius:px2rem(20px);
+        padding:px2rem(50px) px2rem(100px);
+
+        .qrcode-pic{
+            width:px2rem(250px);
+            height:px2rem(250px);
+            overflow:hidden;
+            background:#e5e5e5;
+            margin:0 auto;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+        .txt{
+            text-align:center;
+            margin-top:px2rem(20px);
+            @include font-dpr(16px);
+        }
+       
+    }
+    .close{
+        width:px2rem(64px);
+        height:px2rem(101px);
+        overflow:hidden;
+        background:url("../images/dialog_colse.png") no-repeat top center;
+        background-size:100% auto;
+        position:absolute;
+        right:0;
+        top:0;
+        b{
+            width:px2rem(64px);
+            height:px2rem(64px);
+            overflow:hidden;
+            display:block;
+        }
+    }
+
 }

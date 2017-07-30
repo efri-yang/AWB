@@ -15,7 +15,9 @@
         <ul class="header-list">
             <li class="header-phone"><a href="tel:18559160494"></a></li>
             <li class="header-gz"><a href="#"></a></li>
+            <li class="header-tg"><a href="#" id="J_tg-btn"></a></li>
         </ul>
+
         <div class="pl30 pr30">
             <div class="home-mrzx">
                 <div class="caption"></div>
@@ -64,6 +66,25 @@
             <li class="item-2"><a href="register.html"></a></li>
         </ul>
     </div>
+
+    
+<div class="qrcode-dialog-box" id="J_qrcode-dialog-box">
+    <div class="qrcode-dia-main">
+        <div class="qrcode-pic"></div>
+        <p class="txt">扫描二维码关注</p>
+    </div> 
+    <span class="close" data-roler="close"><b></b></span>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        $qrcodeDia=$("#J_qrcode-dialog-box").dialogs({});
+        $("#J_tg-btn").on("click",function(event){
+            event.preventDefault();
+            $qrcodeDia.show();
+        })
+    })
+</script>
      
 </body>
 
