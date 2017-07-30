@@ -21,15 +21,14 @@
 <script type="text/javascript">
 	$(function(){
 		$searchDia=$("#J_search-dialog-box").dialogs({
-	        afterShow:function(){
-	            myScroll = new IScroll('#wrapper',{
-	                scrollbars: true
-	            });
-	        }
+	        
 	    });
 		$("#J_btn-ft-seach").on("click",function(event){
 				event.preventDefault();
 				$searchDia.show();
+		});
+		$(".search-dia-main .ipt-submit").on("click",function(){
+			alert("xxxx");
 		})
 	})
 </script>
