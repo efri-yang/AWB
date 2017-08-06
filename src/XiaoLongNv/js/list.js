@@ -246,14 +246,14 @@ $(function() {
         $('#J_tab-zjf-hd').trigger("click");
     })();
 
+    
     $proDia=$("#J_pro-dia-box").dialogs({
         afterShow:function(){
-           $(window).on("load",function(){
-                 var myScroll = new IScroll('#wrapper',{
-                    scrollbars: true,
-                    click:true
-                });
-           })
+            var myScroll= new IScroll('#wrapper',{
+                scrollbars: true,
+                click:true
+            });
+           
         }
     });
     $(document).on("click","span.btn-buy",function(){
@@ -263,13 +263,17 @@ $(function() {
     });
 
 
-    //
-    $(".reduce").on("click",function(){
+    
+    $(".reduce").on("touchstart",function(){
         alert("reduce");
     });
-    $(".plus").on("click",function(){
+    $(".plus").on("touchstart",function(){
         alert("plus")
     });
+
+    //  $(document).on("touchstart",".reduce",function(){
+    //     alert("reduce");
+    // }); //如果列表是动态加载（每次弹出框后请求） 那么用这种来使用
     
 
     

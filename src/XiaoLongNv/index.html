@@ -12,9 +12,15 @@
 
 <body>
     <div class="container">
+        <div class="header-avatar">
+            <a href="#">
+                <span class="pic"><b><img src="upload/1.jpg"></b></span>
+                <p class="txt">余媛媛余</p>
+            </a>
+        </div>
         <ul class="header-list">
             <li class="header-phone"><a href="tel:18559160494"></a></li>
-            <li class="header-gz"><a href="#"></a></li>
+            <li class="header-gz"><a href="#" id="J_tg-gz"></a></li>
             <li class="header-tg"><a href="#" id="J_tg-btn"></a></li>
         </ul>
 
@@ -76,13 +82,71 @@
     <span class="close" data-roler="close"><b></b></span>
 </div>
 
+
+<div class="tg-dialog-box" id="J_tg-dialog-box">
+    <div class="tg-dia-main">
+         <div class="scroll-wrap" id="wrapper-2">
+                <div class="scroll-box" id="scroller-2">
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfasdfsad</p>
+                    <p>sadfasdfsad</p>
+                    <p>sadfasdfsad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                    <p>sadfa撒打发斯蒂芬是撒地方阿斯蒂芬ad</p>
+                </div>
+        </div>
+    </div> 
+    <span class="close" data-roler="close"><b></b></span>
+</div>
+<script type="text/javascript" src="js/iscroll.js"></script>
 <script type="text/javascript">
     $(function(){
         $qrcodeDia=$("#J_qrcode-dialog-box").dialogs({});
         $("#J_tg-btn").on("click",function(event){
             event.preventDefault();
             $qrcodeDia.show();
-        })
+        });
+
+
+        $tgDia=$("#J_tg-dialog-box").dialogs({
+            afterShow:function(){
+                var myScroll= new IScroll('#wrapper-2',{
+                    scrollbars: true,
+                    click:true
+                });
+            }
+        });
+        $("#J_tg-gz").on("click",function(){
+            event.preventDefault();
+            $tgDia.show();
+        });
     })
 </script>
      
